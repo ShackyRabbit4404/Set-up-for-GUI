@@ -6,6 +6,8 @@ public class main{
         frame.add(screen);
         Mouse mouse = new Mouse();
         frame.addMouseListener(mouse);
+        Keyboard keyboard = new Keyboard();
+        frame.addKeyListener(keyboard);
         frame.setBounds(0,0,1000,1000);
         frame.setVisible(true);
         new Thread(new frameRateUpdater(30,screen)).start();
