@@ -9,6 +9,7 @@ public class main{
         Keyboard keyboard = new Keyboard();
         frame.addKeyListener(keyboard);
         frame.setBounds(0,0,1000,1000);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
         new Thread(new frameRateUpdater(30,screen)).start();
     }
