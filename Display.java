@@ -1,8 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 public class Display extends JComponent{
-    public Display(){
-        
+    Game game;
+    public Display(Game g){
+        game = g;
     }
     public void draw(){
         super.repaint();
@@ -10,6 +11,6 @@ public class Display extends JComponent{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.RED);
-        g.drawRect(10,10,100,100);
+        g.drawRect(10+game.x,10,100,100);
     }
 }
